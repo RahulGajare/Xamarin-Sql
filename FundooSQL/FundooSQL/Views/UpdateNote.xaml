@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundooSQL.Views.UpdateNote"
+             NavigationPage.HasNavigationBar="True">
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Spacing="20" Orientation="Vertical" VerticalOptions="StartAndExpand" Margin="20,20,20,0">
+                <Label Text="Title"/>
+                <Entry x:Name="Entrytitle" Placeholder="Title" FontAttributes="Bold"/>
+                <Label Text ="Info"/>
+                <Editor x:Name="Editorinfo" Placeholder="Note" AutoSize="TextChanges"/>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button Text="Delete" Clicked="Delete_Clicked"/>
+            </StackLayout>
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

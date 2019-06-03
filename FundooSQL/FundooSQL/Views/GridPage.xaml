@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundooSQL.View.GridPage">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <StackLayout>
+
+                <ScrollView  HeightRequest="750">
+                   
+                      
+                        <StackLayout x:Name="UnpinnedStack" Margin="7,0,7,0">
+                            
+                            <Grid x:Name="GridLayout" >
+
+                            </Grid>
+
+                        </StackLayout>
+
+                   
+                </ScrollView>
+
+
+                <StackLayout VerticalOptions="End" Orientation="Horizontal"
+                             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
+                    <StackLayout  Orientation="Horizontal">
+                        <Button x:Name="TakeaNote" 
+                        HeightRequest="35"
+                    Text="Take a note ..."
+                    VerticalOptions="End" 
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Transparent" 
+                    Margin="10,0,175,20"
+                    Clicked="TakeaNote_Clicked">
+                        </Button>
+                        <Image x:Name="cameraIcon" Source="CameraIcon"  />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
